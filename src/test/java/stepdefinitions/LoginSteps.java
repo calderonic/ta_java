@@ -15,11 +15,10 @@ public class LoginSteps {
     @Inject
     ProductsPage productsPage;
 
-    @When("User clicks the Login button without entering any credentials")
-    public void userClicksTheLoginButtonWithoutEnteringAnyCredentials() {
+    @When("User attempts to login without entering credentials")
+    public void userLeavesUsernameAndPasswordFieldsEmpty() {
         loginPage.clearUsername();
         loginPage.clearPassword();
-        loginPage.clickLogin();
     }
 
     @Then("User see an error message {string} displayed")

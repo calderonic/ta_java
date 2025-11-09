@@ -1,7 +1,8 @@
 Feature: SauceDemo Login Functionality
 
   Scenario: Login with empty credentials
-    When User clicks the Login button without entering any credentials
+    When User attempts to login without entering credentials
+    And User click the Login button
     Then User see an error message "Username is required" displayed
 
   Scenario: Login without password
